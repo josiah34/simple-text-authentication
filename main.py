@@ -30,9 +30,9 @@ def send_verification_code(phone_number):
 def verify_code(verification_code, entered_code):
     """Function to verify the code entered by the user"""
     if verification_code == entered_code:
-        print("You are verified!!")
+        return "You are verified!!"
     else:
-        print("Wrong verification code")
+        return "Wrong verification code"
 
 
 if __name__ == "__main__":
@@ -40,4 +40,5 @@ if __name__ == "__main__":
     phone_number = input("Enter your phone number: ")
     verification_code = send_verification_code(phone_number)
     entered_code = input("Enter the verification code: ")
-    verify_code(verification_code, entered_code)
+    message = verify_code(verification_code, entered_code)
+    print(message)
